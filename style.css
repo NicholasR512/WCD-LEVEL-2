@@ -1,0 +1,276 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Index.jpg) center/cover no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+
+.name a {
+    text-decoration: none;
+    color: white;
+}
+
+.name h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    text-align: right;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    position: relative;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #f00;
+    width: 0;
+    transition: width 0.5s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+.text-box h1 {
+    font-size: 62px;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #09cad8;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    transition: 0.5s;
+}
+
+.hero-btn:hover {
+    border-color: #0e0d0d;
+    background: #f00;
+    color: #000;
+    transition: 0.5s;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        background: #f44336;
+        position: absolute;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        text-align: left;
+        padding: 30px;
+        transition: right 1s;
+    }
+
+    nav .fa {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+        color: #fff;
+    }
+}
+
+
+/* Section: Job Openings */
+.jobopenings {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.jobopenings h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.jobopenings p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.jobopenings .row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.jobopenings-col {
+    flex: 1;
+    max-width: 31%;
+    text-align: left;
+}
+
+.jobopenings-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.jobopenings-col h3 {
+    margin: 16px 0 10px;
+}
+
+.jobopenings-col p {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/* Section: More About Us */
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.course h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.course p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.course .row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.course-col {
+    flex: 1;
+    max-width: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.5s;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the buttons within the course columns */
+.course-btn {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    background: #d80909;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.course-btn:hover {
+    background: #f44336;
+}
+
+/* Footer */
+footer {
+    background: #f8f9fa;
+    padding: 20px 6%;
+    text-align: center;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer ul li a {
+    color: #09cad8;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #f44336;
+    text-decoration: underline;
+}
+
+footer span {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
