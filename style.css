@@ -62,7 +62,7 @@ nav {
     content: '';
     display: block;
     height: 2px;
-    background: #f00;
+    background: #f46;
     width: 0;
     transition: width 0.5s;
 }
@@ -137,52 +137,55 @@ nav .fa {
     }
 }
 
+.about-content {
+    margin-top: 30px;
+    background-color: var(--darkgray);
+}
 
-/* Section: Job Openings */
-.jobopenings {
-    width: 80%;
-    margin: auto;
+.about-column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.about-column h1 {
+    color: var(--white);
     text-align: center;
-    padding: 100px 0;
+    margin-top: 15px;
+    font-family: "Delius", sans-serif;
 }
 
-.jobopenings h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.about-column p {
+    color: var(--white);
+    text-align: center;
+    margin-top: 15px;
+    font-family: "Delius", sans-serif;
+    font-size: 1.25rem;
 }
 
-.jobopenings p {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 50px;
+.about-column img{
+    margin-top: 60px;
+    width: 75%;
+    margin-left: 50px;
 }
 
-.jobopenings .row {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+.mySlides {
+    display: none;
+    border-radius: 35% 65% 30% 70% / 74% 34% 66% 26% ;
+    box-shadow: 10px 10px var(--coral);
 }
 
-.jobopenings-col {
-    flex: 1;
-    max-width: 31%;
-    text-align: left;
+.about-row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.jobopenings-col img {
-    width: 100%;
-    border-radius: 10px;
+.about-row-bottom {
+    margin-top: 150px;
 }
+/* Section: Job Openings */
 
-.jobopenings-col h3 {
-    margin: 16px 0 10px;
-}
-
-.jobopenings-col p {
-    font-size: 14px;
-    line-height: 22px;
-}
 
 /* Section: More About Us */
 .course {
