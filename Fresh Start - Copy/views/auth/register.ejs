@@ -1,0 +1,29 @@
+<h1>Register</h1>
+<form id="registerForm" action="/auth/register" method="POST">
+    <label>Username</label>
+    <input type="text" name="username" required>
+    <label>Email</label>
+    <input type="email" name="email" required>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <label>Role</label>
+    <select name="role" id="role" required>
+        <option value="Student">Student</option>
+        <option value="Business">Business</option>
+    </select>
+    <button type="submit">Register</button>
+</form>
+
+<p>Already have an account? <a href="/auth/login">Login here</a>.</p>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+        const role = document.getElementById('role').value;
+        const email = document.querySelector('input[name="email"]').value;
+        
+        if (role === 'Student' && !email.endsWith('@roverkids.org')) {
+            e.preventDefault();
+            alert('Students must use an email that ends with @roverkids.org.');
+        }
+    });
+</script>

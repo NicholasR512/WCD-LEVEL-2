@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/errorMessage.ejs') %>
+    <h1>Add Jobs</h1>
+    <form action="/jobs" method="POST"  onsubmit="return validateSalary()">
+    <%- include('form_fields') %>
+    <a href="/jobs">Cancel</a>
+    <button type="submit">Create</button>
+</form>
+</body>
+<script>
+    function validateSalary() {
+        const minSalary = parseFloat(document.getElementById('minSalary').value);
+        const maxSalary = parseFloat(document.getElementById('maxSalary').value);
+
+        if (minSalary >= maxSalary) {
+            alert('Minimum pay must be less than maximum pay.');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
+</html>

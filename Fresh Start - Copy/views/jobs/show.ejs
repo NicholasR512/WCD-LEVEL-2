@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/errorMessage.ejs') %>
+    <h1>Job Details</h1>
+    <div>
+        Title: <%= job.title %>
+    </div>
+    <div>
+        Company: <%= job.company %>
+    </div>
+    <div>
+        Description: <%= job.description %>
+    </div>
+    <div>
+        Minimum Pay: $<%= job.minSalary.toFixed(2) %> an hour
+    </div>
+    <div>
+        Maximum Pay: $<%= job.maxSalary.toFixed(2) %> an hour
+    </div>
+    <div>
+        Job Type: <%= job.jobType %>
+    </div>
+    <div>
+        City: <%= job.city %>
+    </div>
+    <div>
+        Address: <%= job.location %>
+    </div>
+    <div>
+        Required Age: <%= job.requiredAge %>
+    </div>
+    <div>
+        Date Posted: <%= job.createdAt.toDateString() %>
+    </div>
+    <% if (currentUser && currentUser.role === 'Student') { %>
+        <form action="/jobs/<%= job.id %>/apply" method="POST">
+            <button type="submit">Apply for this job</button>
+        </form>
+    <% } %>
+    
+</body>
+</html>
