@@ -16,267 +16,200 @@ body {
 }
 
 /* Header Section */
-.header {
-    min-height: 100vh;
-    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(eastt.jpg) center/cover no-repeat;
-    position: relative;
-    color: #fff;
+.nav-container {
+    width: 100%;
+    background-color: var(--darkgray);
 }
 
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2% 6%;
+    padding: 1rem 2rem;
+    max-width: 1720px;
+    margin: 0 auto;
 }
 
-.name a {
+.navbar a {
     text-decoration: none;
-    color: white;
 }
 
-.name h2 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-}
-
-/* Navigation Menu */
-.nav-links {
-    display: flex;
-    gap: 15px;
-    text-align: right;
-    flex-direction: row; /* Default layout for larger screens */
-}
-
-.nav-links ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-
-.nav-links ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    position: relative;
-}
-
-.nav-links ul li a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: #f46;
-    width: 0;
-    transition: width 0.3s ease-in-out;
-}
-
-.nav-links ul li a:hover::after {
-    width: 100%;
-}
-
-/* Text Box */
-.text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 90%;
-}
-
-.text-box h1 {
-    font-size: 62px;
-    margin-bottom: 20px;
-}
-
-.text-box p {
-    margin-bottom: 40px;
-}
-
-.hero-btn {
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #09cad8;
-    padding: 12px 34px;
-    font-size: 15px;
-    background: transparent;
-    transition: 0.5s;
-}
-
-.hero-btn:hover {
-    border-color: #0e0d0d;
-    background: #f00;
-    color: #000;
-    transition: 0.5s;
-}
-
-/* Responsive Navigation Menu */
-.nav-links {
-    flex-direction: column;
-    background: #f44336;
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hide menu by default */
-    width: 100vw; /* Make the menu take up the full width */
-    height: 100vh; /* Make the menu take up the full height */
-    text-align: left;
-    padding: 30px;
-    transition: right 0.5s ease;
-    overflow-y: auto;
-    z-index: 1000; /* Ensure it appears above all other elements */
-}
-
-.nav-links.show {
-    right: 0; /* Show menu when the class "show" is added */
-}
-
-.nav-links ul {
-    flex-direction: column;
-    gap: 20px;
-}
-
-.nav-links ul li a {
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* Hamburger and Close Icon Styles */
-nav .fa-bars,
-nav .fa-times {
-    display: none;
-    font-size: 24px;
+#logo {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-family: "BioRhyme", sans-serif;
     cursor: pointer;
-    color: white;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1100; /* Ensure icons are above the menu */
 }
 
-/* Show Hamburger Icon and Manage Icons Visibility on Small Screens */
-@media (max-width: 700px) {
-    nav .fa-bars {
-        display: block; /* Show hamburger menu icon */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    color: var(--red);
+    transition: all 0.2s ease-out;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger:hover .bar {
+    background: darkred; /* Darker red for hover effect */
+}
+
+.nav-menu.active ~ .hamburger .bar {
+    background: darkred; /* Darker red when menu is active */
+}
+
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: red);
+    margin: 3px 0;
+}
+
+@media screen and (max-width: 830px) {
+    .hamburger {
+        display: flex;
     }
 
-    nav .fa-times {
-        display: none; /* Close icon is hidden by default */
+    .nav-menu {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background: var(--darkgray);
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
     }
 
     .nav-links {
-        flex-direction: column;
-        background: #f44336;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100vw; /* Full screen width */
-        height: 100vh; /* Full screen height */
-        text-align: left;
-        padding: 30px;
-        transition: right 0.5s ease;
-        overflow-y: auto;
-        z-index: 1000;
+        padding: 1rem 0;
     }
+}
 
-    .nav-links.show {
-        right: 0; /* Show menu */
-    }
+/* Main Section */
+.main {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f0f0; /* Specific background color for the main section */
+}
 
-    .nav-links.show + .fa-bars {
-        display: none; /* Hide hamburger icon when menu is open */
-    }
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .nav-links.show ~ .fa-times {
-        display: block; /* Show close icon when menu is open */
-    }
+.main-content {
+    max-width: 600px;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-img-container {
+    text-align: center;
+}
+
+#main-img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* About Section */
 .about-content {
     margin-top: 30px;
-    background-color: #f8f9fa;
-    padding: 30px 20px;
+    background-color: var(--neonblue);
+    padding: 2rem;
+}
+
+.about-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .about-column {
-    float: left;
-    width: 50%;
-    padding: 10px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
     text-align: center;
 }
 
 .about-column h1 {
-    color: #333;
-    text-align: center;
-    margin-top: 15px;
+    color: var(--white);
+    margin-bottom: 1rem;
     font-family: "Delius", sans-serif;
 }
 
 .about-column p {
-    color: #555;
-    text-align: center;
-    margin-top: 15px;
-    font-family: "Delius", sans-serif;
-    font-size: 1.25rem;
+    color: var(--white);
+    font-size: 1.2rem;
 }
 
 .about-column img {
-    margin-top: 30px;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mySlides {
-    display: none;
-    border-radius: 35% 65% 30% 70% / 74% 34% 66% 26%;
-    box-shadow: 10px 10px #f46;
-}
-
-.about-row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.about-row-bottom {
-    margin-top: 50px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
 }
 
 /* Course Section */
 .course {
     width: 80%;
-    margin: auto;
+    margin: 2rem auto;
     text-align: center;
-    padding: 50px 0;
+    padding: 2rem;
 }
 
 .course h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .course p {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 2rem;
 }
 
 .course .row {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .course-col {
     flex: 1;
-    max-width: 31%;
+    min-width: 280px;
+    max-width: 350px;
     background: #fff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
 }
@@ -287,7 +220,7 @@ nav .fa-times {
 
 .course-btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 1rem;
     text-decoration: none;
     color: white;
     background: #d80909;
@@ -335,123 +268,3 @@ footer span {
     margin-bottom: 10px;
     display: block;
 }
-
-/* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-body{
-  min-height: 100vh;
-  width: 100%;
-  background: whitesmoke;
-}
-.container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  max-width: 430px;
-  width: 100%;
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-}
-
-
-#check:checked ~ .registration{
-  display: block;
-}
-#check:checked ~ .login{
-  display: none;
-}
-#check{
-  display: none;
-}
-.container .form{
-  padding: 2rem;
-}
-.form header{
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
- .form input{
-   height: 60px;
-   width: 100%;
-   padding: 0 15px;
-   font-size: 17px;
-   margin-bottom: 1.3rem;
-   border: 1px solid #ddd;
-   border-radius: 6px;
-   outline: none;
- }
- .form input:focus{
-   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
- }
-.form a{
-  font-size: 16px;
-  color: #F00;
-  text-decoration: none;
-}
-.form a:hover{
-  text-decoration: underline;
-}
-.form input.button{
-  color: #fff;
-  background: #F00;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin-top: 1.7rem;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.form input.button:hover{
-  background: #F00;
-}
-.signup{
-  font-size: 17px;
-  text-align: center;
-}
-.signup label{
-  color: #F00;
-  cursor: pointer;
-}
-.signup label:hover{
-  text-decoration: underline;
-}
-
-/* Add these styles to your existing CSS file */
-.dropdown {
-    height: 60px;
-    width: 100%;
-    padding: 0 15px;
-    font-size: 17px;
-    margin-bottom: 1.3rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background: #fff url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="grey"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3C/svg%3E') no-repeat right 15px center;
-    outline: none;
-    appearance: none;
-    cursor: pointer;
-    color: grey; /* Match text color */
-  }
-  
-  .dropdown:focus {
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown option {
-    font-size: 16px;
-    color: grey; /* Match text color */
-  }
-  
-  .dropdown option:disabled {
-    color: #bbb; /* Subtle color for the placeholder */
-  }
-  

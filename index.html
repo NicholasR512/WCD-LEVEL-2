@@ -6,60 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoverWork!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header Section -->
-    <header class="header">
-      <nav>
-        <div class="name">
-            <a href="/">
-                <h2>RoverWork</h2>
-            </a>
-        </div>
-        <div class="nav-links" id="nav-links">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="jobo.html">JOB POSTINGS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="login.html">LOGIN</a></li>
+    <div class="nav-container">
+        <nav class="navbar">
+            <a href="index.html"><h1 id="logo">RoverWork</h1></a>
+            <div class="hamburger" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="about.html" class="nav-links">About Us</a></li>
+                <li><a href="jobs.html" class="nav-links">Jobs</a></li>
+                <li><a href="#" class="nav-links">Contact Us</a></li>
+                <li><a href="#" class="nav-links">Login</a></li>
             </ul>
-        </div>
-        <i class="fa fa-bars" id="hamburger" onclick="showMenu()"></i>
-        <i class="fa fa-times" id="close" onclick="hideMenu()" style="display: none;"></i>
-    </nav>
-    
+        </nav>
+    </div>
 
-        <div class="text-box">
-            <h1>Looking For Job Applicants</h1>
-            <p>Need a job? Look no further!</p>
-            <a href="jobo.html" class="hero-btn">Get Started!</a>
+    <!-- Main Section -->
+    <div class="main">
+        <div class="main-container">
+            <div class="main-content">
+                <h1>Get A Job</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus animi accusantium eum fugiat nisi facere.</p>
+            </div>
+            <div class="main-img-container">
+                <img src="eastt.jpg" alt="Main Image" id="main-img">
+            </div>
         </div>
-    </header>
+    </div>
 
     <!-- About Section -->
     <section class="about-content">
         <div class="about-row">
-            <div class="about-column left-text" data-aos="fade-up">
+            <div class="about-column left-text">
                 <h1>Student Benefits</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque consequuntur inventore quidem numquam autem debitis vitae dolorum velit nobis molestias consequatur necessitatibus voluptatem aut, corrupti minima unde fugit. Vitae?</p>
             </div>
             <div class="about-column">
-                <img src="StudentBenefits.jpg" alt="Student Benefits Image" id="right-image">
+                <img src="Index.jpg" alt="Student Benefits" id="right-image">
             </div>
         </div>
 
         <div class="about-row about-row-bottom">
-            <div class="about-column" data-aos="fade-up">
-                <img src="Index.jpg" alt="Business Benefits Image" id="left-image">
+            <div class="about-column">
+                <img src="Index.jpg" alt="Business Benefits" id="left-image">
             </div>
-            <div class="about-column right-text" id="right-text">
+            <div class="about-column right-text">
                 <h1>Business Benefits</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque consequuntur inventore quidem numquam autem debitis vitae dolorum velit nobis molestias consequatur necessitatibus voluptatem aut, corrupti minima unde fugit. Vitae?</p>
             </div>
@@ -67,23 +69,23 @@
     </section>
 
     <!-- More About Us Section -->
-    <section class="course" data-aos="fade-up">
+    <section class="course">
         <h1>More About Us!</h1>
         <p>Explore how we help students connect with exciting job opportunities!</p>
         <div class="row">
             <div class="course-col">
                 <h3>Our Mission</h3>
-                <p>Our school is dedicated to empowering students to achieve their career aspirations. By providing resources, guidance, and a network of employers, we help bridge the gap between education and employment. Whether it's through internships, part-time jobs, or full-time careers, we ensure every student has the tools to succeed in the workforce.</p>
+                <p>Our school is dedicated to empowering students to achieve their career aspirations. By providing resources, guidance, and a network of employers, we bridge the gap between education and employment.</p>
                 <a href="#" class="course-btn">Learn More</a>
             </div>
             <div class="course-col">
                 <h3>Success Stories</h3>
-                <p>Each year, we connect hundreds of students with leading employers across various industries. With over 1,000 job applications processed annually and a 90% placement rate, our students are thriving in their chosen fields. Employers value the dedication and skills our students bring to their teams, and we are proud of the success our alumni achieve.</p>
+                <p>Each year, we connect hundreds of students with leading employers. With a 90% placement rate, our alumni thrive in their chosen fields.</p>
                 <a href="about.html" class="course-btn">Learn More</a>
             </div>
             <div class="course-col">
                 <h3>Why Choose Us?</h3>
-                <p>We believe in fostering a supportive and inclusive environment where students can grow both personally and professionally. Our career services team works tirelessly to match students with opportunities that align with their passions and goals. From resume workshops to mock interviews, we provide all the resources needed to build a successful career path.</p>
+                <p>We foster a supportive environment where students grow personally and professionally. From resume workshops to mock interviews, we provide resources for success.</p>
                 <a href="about.html" class="course-btn">Learn More</a>
             </div>
         </div>
@@ -92,7 +94,7 @@
     <!-- Footer -->
     <footer>
         <div>
-            <span>© 2023 RoverWork. All Rights Reserved.</span>
+            <span>&copy; 2023 RoverWork. All Rights Reserved.</span>
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="#">Privacy Policy</a></li>
@@ -103,38 +105,13 @@
     </footer>
 
     <!-- Scripts -->
-     <script>
-    const navLinks = document.getElementById('nav-links');
-    const hamburger = document.getElementById('hamburger');
-    const closeIcon = document.getElementById('close');
-    
-    function showMenu() {
-        navLinks.style.right = '0';
-        hamburger.style.display = 'none'; // Hide hamburger icon
-        closeIcon.style.display = 'block'; // Show close icon
-    }
-    
-    function hideMenu() {
-        navLinks.style.right = '-100vw';
-        hamburger.style.display = 'block'; // Show hamburger icon
-        closeIcon.style.display = 'none'; // Hide close icon
-    }
-    </script>
-
     <script>
-        const navLinks = document.getElementById('nav-links');
+        const hamburger = document.getElementById('.hamburger');
+        const navMenu = document.getElementById('.nav-menu');
 
-        function showMenu() {
-            navLinks.style.right = '0';
-        }
-
-        function hideMenu() {
-            navLinks.style.right = '-200px';
-        }
-    </script>
-
-    <script>
-        AOS.init();
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 
