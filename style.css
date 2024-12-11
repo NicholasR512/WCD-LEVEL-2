@@ -5,12 +5,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-:root {
-    --white: #ffffff;
-    --red: #ff0000;
-    --darkgray: #333333;
-    --neonblue: #4CAF50; /* Or your preferred color */
-}
 
 
 html {
