@@ -12,12 +12,13 @@ html {
 
 body {
     line-height: 1.6;
+    background-color: #f8f9fa;
 }
 
 /* Header Section */
 .header {
     min-height: 100vh;
-    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Index.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(eastt.jpg) center/cover no-repeat;
     position: relative;
     color: #fff;
 }
@@ -39,10 +40,12 @@ nav {
     font-weight: bold;
 }
 
+/* Navigation Menu */
 .nav-links {
     display: flex;
     gap: 15px;
     text-align: right;
+    flex-direction: row; /* Default layout for larger screens */
 }
 
 .nav-links ul {
@@ -54,7 +57,7 @@ nav {
 .nav-links ul li a {
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     position: relative;
 }
 
@@ -64,13 +67,14 @@ nav {
     height: 2px;
     background: #f46;
     width: 0;
-    transition: width 0.5s;
+    transition: width 0.3s ease-in-out;
 }
 
 .nav-links ul li a:hover::after {
     width: 100%;
 }
 
+/* Text Box */
 .text-box {
     position: absolute;
     top: 50%;
@@ -106,73 +110,128 @@ nav {
     transition: 0.5s;
 }
 
-nav .fa {
-    display: none;
+/* Responsive Navigation Menu */
+.nav-links {
+    flex-direction: column;
+    background: #f44336;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide menu by default */
+    width: 100vw; /* Make the menu take up the full width */
+    height: 100vh; /* Make the menu take up the full height */
+    text-align: left;
+    padding: 30px;
+    transition: right 0.5s ease;
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it appears above all other elements */
 }
 
-/* Responsive Design */
+.nav-links.show {
+    right: 0; /* Show menu when the class "show" is added */
+}
+
+.nav-links ul {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-links ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Hamburger and Close Icon Styles */
+nav .fa-bars,
+nav .fa-times {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1100; /* Ensure icons are above the menu */
+}
+
+/* Show Hamburger Icon and Manage Icons Visibility on Small Screens */
 @media (max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
+    nav .fa-bars {
+        display: block; /* Show hamburger menu icon */
+    }
+
+    nav .fa-times {
+        display: none; /* Close icon is hidden by default */
     }
 
     .nav-links {
         flex-direction: column;
         background: #f44336;
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
+        right: -100%;
+        width: 100vw; /* Full screen width */
+        height: 100vh; /* Full screen height */
         text-align: left;
         padding: 30px;
-        transition: right 1s;
+        transition: right 0.5s ease;
+        overflow-y: auto;
+        z-index: 1000;
     }
 
-    nav .fa {
-        display: block;
-        font-size: 22px;
-        cursor: pointer;
-        color: #fff;
+    .nav-links.show {
+        right: 0; /* Show menu */
+    }
+
+    .nav-links.show + .fa-bars {
+        display: none; /* Hide hamburger icon when menu is open */
+    }
+
+    .nav-links.show ~ .fa-times {
+        display: block; /* Show close icon when menu is open */
     }
 }
 
+/* About Section */
 .about-content {
     margin-top: 30px;
-    background-color: var(--darkgray);
+    background-color: #f8f9fa;
+    padding: 30px 20px;
 }
 
 .about-column {
     float: left;
     width: 50%;
     padding: 10px;
+    text-align: center;
 }
 
 .about-column h1 {
-    color: var(--white);
+    color: #333;
     text-align: center;
     margin-top: 15px;
     font-family: "Delius", sans-serif;
 }
 
 .about-column p {
-    color: var(--white);
+    color: #555;
     text-align: center;
     margin-top: 15px;
     font-family: "Delius", sans-serif;
     font-size: 1.25rem;
 }
 
-.about-column img{
-    margin-top: 60px;
+.about-column img {
+    margin-top: 30px;
     width: 75%;
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mySlides {
     display: none;
-    border-radius: 35% 65% 30% 70% / 74% 34% 66% 26% ;
-    box-shadow: 10px 10px var(--coral);
+    border-radius: 35% 65% 30% 70% / 74% 34% 66% 26%;
+    box-shadow: 10px 10px #f46;
 }
 
 .about-row:after {
@@ -182,22 +241,21 @@ nav .fa {
 }
 
 .about-row-bottom {
-    margin-top: 150px;
+    margin-top: 50px;
 }
-/* Section: Job Openings */
 
-
-/* Section: More About Us */
+/* Course Section */
 .course {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .course h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .course p {
@@ -216,17 +274,17 @@ nav .fa {
 .course-col {
     flex: 1;
     max-width: 31%;
-    background: #fff3f3;
+    background: #fff;
     border-radius: 10px;
     padding: 20px;
-    transition: box-shadow 0.5s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
 .course-col:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling for the buttons within the course columns */
 .course-btn {
     display: inline-block;
     margin-top: 15px;
