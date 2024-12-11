@@ -24,7 +24,6 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#" class="nav-links">Home</a></li>
-                <li><a href="about.html" class="nav-links">About Us</a></li>
                 <li><a href="jobs.html" class="nav-links">Jobs</a></li>
                 <li><a href="#" class="nav-links">Contact Us</a></li>
                 <li><a href="#" class="nav-links">Login</a></li>
@@ -106,11 +105,11 @@
 
     <!-- Scripts -->
     <script>
-        const hamburger = document.getElementById('.hamburger');
+        const hamburger = document.getElementById('.mobile-menu');
         const navMenu = document.getElementById('.nav-menu');
 
         hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
     </script>
 </body>
