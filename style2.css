@@ -1,10 +1,10 @@
 :root {
     --darkgray:#212329;
-    --brightred:#F9423D;
+    --brightred:#F00;
 
     --white:#FFF;
 
-    --lightred:#F9433DCC;
+    --lightred:#F00;
 
     --lightblue:#337AF1;
 
@@ -13,7 +13,7 @@
     margin:0;
 }
 .main{
-    background-color: var(--darkgray);
+    background-color: var(--white);
 }
 .main-container{
     display: grid;
@@ -23,7 +23,7 @@
     width:100%;
     margin: 0 auto;
     height:90vh;
-    background-color: var(--darkgray);
+    background-color: var(--white);
 
 }
 .main-content{
@@ -43,7 +43,7 @@
 }
 .main-btn{
     font-size:1rem;
-    background-color: red;
+    background-color: #F00;
     padding:  8px 20px;
     border: none;
     border-radius: 4px;
